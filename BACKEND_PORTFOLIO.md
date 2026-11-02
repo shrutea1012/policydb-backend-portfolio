@@ -33,24 +33,21 @@ My primary responsibility was developing, testing and maintaining the **FastAPI 
 
 ## System Architecture
 
-```text
-User / API client
-       |
-       v
-FastAPI /ask endpoint  <-- My main area of responsibility
-       |
-       +--> Request validation, role handling, rate limiting
-       |
-       +--> Retrieval component --> Qdrant vector database
-       |
-       +--> Generation component --> AI model (where available)
-       |
-       +--> Structured response and citations
-       |
-       +--> Request logs and performance timings
-```
+PolicyDB uses a backend API to handle questions about university policies.
 
-The retrieval, generation and frontend components were collaborative team work. The diagram is a high-level conceptual overview, not a claim that I personally built every component.
+The backend was built using Python and FastAPI. When a user submits a question through the `/ask` endpoint, the backend processes the request and communicates with the retrieval component to find relevant information from policy documents stored in Qdrant.
+
+The retrieved information is then used to produce a response with supporting citations.
+
+The backend also handles input validation, error handling, rate limiting and request logging.
+
+**Main components:**
+- **FastAPI:** Handles incoming questions and API responses.
+- **Qdrant:** Stores and retrieves relevant policy information.
+- **Retrieval pipeline:** Finds and ranks relevant document chunks.
+- **Generation component:** Produces answers using the retrieved information.
+- **Docker:** Runs the Qdrant database locally.
+- **Swagger UI:** Used to test API endpoints during development.
 
 ## Demonstration
 
