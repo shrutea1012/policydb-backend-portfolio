@@ -76,3 +76,16 @@ These experiences are relevant to junior systems administration, IT support, inf
 PolicyDB was developed as a **team capstone project**. This portfolio focuses on my individual backend contributions. Other team members worked on retrieval, generation, frontend and quality assurance.
 
 **Full team repository:** https://github.com/mindmeshgroup/policy-chatbot
+
+
+## Project Screenshots
+
+### FastAPI Swagger UI
+![Successful API Request](screenshots/Swagger-api.png)
+
+### Backend Execution
+![Backend Terminal](screenshots/backend-terminal.png)
+
+### Qdrant Database in Docker
+![Qdrant Container](screenshots/qdrant-docker.png)
+
